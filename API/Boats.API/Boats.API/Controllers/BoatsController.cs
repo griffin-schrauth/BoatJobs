@@ -26,12 +26,12 @@ namespace Boats.API.Controllers
         }
 
         [HttpGet]
-        [Route("id:guid")]
+        [Route("{id:guid}")]
         [ActionName("GetJob")]
         public async Task<IActionResult> GetJob([FromRoute] Guid id)
         {
-            var card = await boatsDbContext.Boats.FirstOrDefaultAsync(x=>x.Id == id);
-            if(card != null)
+            var card = await boatsDbContext.Boats.FirstOrDefaultAsync(x => x.Id == id);
+            if (card != null)
             {
                 return Ok(card);
             }
@@ -46,9 +46,36 @@ namespace Boats.API.Controllers
 
             await boatsDbContext.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetJob),boat.Id,boat);
+            return CreatedAtAction(nameof(GetJob), boat.Id, boat);
         }
 
-        // may need to add a Delete job but want to make that specific to user database
+        // below will be all the API calls for the user accounts
+        //GRIFFIN WE NEED TO MAKE A SEPERATE CONTROLLER FOR EACH TABLE :)
+
+        //    [HttpGet]
+        //    [Route("{id:guid}")]
+        //    [ActionName("GetUser")]
+        //    public async Task<IActionResult> GetUser([FromRoute] Guid id)
+        //    {
+        //        var userInfo = await boatsDbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
+        //        if (userInfo != null)
+        //        {
+        //            return Ok(userInfo);
+        //        }
+        //        return NotFound("User not found");
+        //    }
+
+
+
+
+        //    [HttpPost]
+        //    public async Task<IActionResult> AddUser([FromBody] User user)
+        //    {
+        //        user.Id = Guid.NewGuid();
+        //        await boatsDbContext.Users.AddAsync(user);
+        //        await boatsDbContext.SaveChangesAsync();
+        //        return CreatedAtAction(nameof(GetUser),user.Id,user);
+        //    }
+        //}
     }
 }

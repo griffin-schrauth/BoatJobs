@@ -10,5 +10,6 @@ namespace Boats.API.Data
         }
 
         public DbSet<Boat> Boats { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
