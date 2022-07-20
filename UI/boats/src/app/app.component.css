@@ -1,0 +1,43 @@
+.container {
+    padding: 3em;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+h1 {
+    text-align:center;
+}
+
+.boats-container {
+    display: flex;
+    width: 100%;
+    padding-top: 5em;
+}
+
+.boats-form {
+    width: 50%;
+    padding: 2em;
+}
+
+.boats-grid {
+    width: 50%;
+    padding: 2em;
+}
+
+form .form-group {
+    margin-bottom: 1em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="password"], form input[type="number"]{
+    width: 100%;
+    padding: 0.5em 0.3em;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}

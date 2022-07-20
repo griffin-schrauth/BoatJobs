@@ -46,36 +46,23 @@ namespace Boats.API.Controllers
 
             await boatsDbContext.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetJob), boat.Id, boat);
+            return CreatedAtAction(nameof(GetJob), new {id = boat.Id}, boat);
         }
 
-        // below will be all the API calls for the user accounts
-        //GRIFFIN WE NEED TO MAKE A SEPERATE CONTROLLER FOR EACH TABLE :)
+        [HttpDelete]
+        [Route("{id:guid}")]
+        public async Task<IActionResult> DeleteJob([FromRoute] Guid id)
+        {
+            var existingJob = await boatsDbContext.Boats.FirstOrDefaultAsync(x => x.Id == id);
+            if (existingJob != null)
+            {
+                boatsDbContext.Remove(existingJob); 
+                await boatsDbContext.SaveChangesAsync();
+                return Ok(existingJob);
+            }
+            return NotFound("Job not found");
+        }
 
-        //    [HttpGet]
-        //    [Route("{id:guid}")]
-        //    [ActionName("GetUser")]
-        //    public async Task<IActionResult> GetUser([FromRoute] Guid id)
-        //    {
-        //        var userInfo = await boatsDbContext.Users.FirstOrDefaultAsync(x => x.Id == id);
-        //        if (userInfo != null)
-        //        {
-        //            return Ok(userInfo);
-        //        }
-        //        return NotFound("User not found");
-        //    }
-
-
-
-
-        //    [HttpPost]
-        //    public async Task<IActionResult> AddUser([FromBody] User user)
-        //    {
-        //        user.Id = Guid.NewGuid();
-        //        await boatsDbContext.Users.AddAsync(user);
-        //        await boatsDbContext.SaveChangesAsync();
-        //        return CreatedAtAction(nameof(GetUser),user.Id,user);
-        //    }
-        //}
+       
     }
 }
