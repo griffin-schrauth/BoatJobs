@@ -5,7 +5,7 @@ export interface Boat {
     state: string;
     zipcode: string;
     jobTitle: string;
-    jobDescription: string;
+    jobDesciption: string;
     date: string;
     amount: Float32Array;
 }

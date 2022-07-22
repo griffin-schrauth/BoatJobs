@@ -1,4 +1,6 @@
+import { NONE_TYPE } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Boat } from './models/boat.model';
 import { BoatsService } from './service/boats.service';
 
 @Component({
@@ -8,6 +10,19 @@ import { BoatsService } from './service/boats.service';
 })
 export class AppComponent implements OnInit {
   title = 'boats';
+  jobs : Boat[] = []
+  job : Boat = {
+    id:'',
+    name:'',
+    county:'',
+    state:'',
+    zipcode:'',
+    jobTitle:'',
+    jobDesciption:'',//this is spelt desciption in sql
+    date:'',
+    amount: new Float32Array,
+
+  }
 
   constructor(private boatsService: BoatsService){
 
@@ -15,16 +30,37 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllBoats();
+    this.getAllJobs();
   }
 
-  getAllBoats() {
-    this.boatsService.getAllBoats()
+  getAllJobs() {
+    this.boatsService.getAllJobs()
     .subscribe(
       response => {
-        console.log(response)
+        this.jobs = response
       }
-    )
+    );
   }
+
+  onSubmit() {
+    this.boatsService.addJob(this.job)
+    .subscribe(
+      response => {
+        this.getAllJobs();
+        this.job = {
+          id:'',
+          name:'',
+          county:'',
+          state:'',
+          zipcode:'',
+          jobTitle:'',
+          jobDesciption:'',//this is spelt desciption in sql
+          date:'',
+          amount: new Float32Array,
+        }
+      }
+    );
+  }
+
 
 }

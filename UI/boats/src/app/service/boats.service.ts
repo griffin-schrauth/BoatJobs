@@ -15,7 +15,12 @@ export class BoatsService {
 
 
   //get all boats jobs
-  getAllBoats() : Observable<Boat[]> {
+  getAllJobs() : Observable<Boat[]> {
     return this.http.get<Boat[]>(this.baseUrl);
+  }
+
+  addJob(job: Boat): Observable<Boat> {
+    job.id = '00000000-0000-0000-0000-000000000000';
+    return this.http.post<Boat>(this.baseUrl, job);
   }
 }
