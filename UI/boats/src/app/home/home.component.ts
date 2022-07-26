@@ -63,7 +63,8 @@ export class HomeComponent implements OnInit {
     );
   }
 
-
+// dont know if i want the users to be ablt to delete jobs.
+//should be only able to delete their own jobs
 }
 
 

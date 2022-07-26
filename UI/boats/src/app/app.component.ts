@@ -10,6 +10,6 @@ import { BoatsService } from './service/boats.service';
 })
 export class AppComponent {
   
-  
+  title = "boats" ;
 
 }
