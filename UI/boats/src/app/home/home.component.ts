@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NONE_TYPE } from '@angular/compiler';
-import { Boat } from 'src/app/models/boat.model';
-import { BoatsService } from 'src/app/service/boats.service';
+import { Boat } from '../models/boat.model'; 
+import { BoatsService } from '../service/boats.service';
 
 @Component({ 
    
