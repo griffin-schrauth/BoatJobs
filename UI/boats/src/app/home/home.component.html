@@ -1,0 +1,62 @@
+
+<div class="container">
+    <h1>Jobs Available</h1>
+  
+    <div class="boats-container">
+      <div class="boats-form">
+        <form #form="ngForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for=""> Job Name</label>
+            <input type="text" name="jobName" [(ngModel)]="job.name">
+          </div>
+          <div class="form-group">
+            <label for=""> Job County </label>
+            <input type="text" name="jobCounty" [(ngModel)]="job.county">
+          </div>
+          <div class="form-group">
+            <label for=""> Job State </label>
+            <input type="text" name="JobState" [(ngModel)]="job.state">
+          </div>
+          <div class="form-group">
+            <label for=""> Job Zipcode </label>
+            <input type="text" name="jobZipcode" [(ngModel)]="job.zipcode">
+          </div>
+          <div class="form-group">
+            <label for=""> Job Title</label>
+            <input type="text" name="jobtitle" [(ngModel)]="job.jobTitle">
+          </div>
+          <div class="form-group">
+            <label for=""> Job Description</label>
+            <input type="text" name="jobdesciption" [(ngModel)]="job.jobDesciption">
+          </div>
+          <div class="form-group">
+            <label for=""> Job Date</label>
+            <input type="text" name="jobDate" [(ngModel)]="job.date">
+          </div>
+          <div class="form-group">
+            <label for=""> Job Amount</label>
+            <input type="text" name="jobAmount" [(ngModel)]="job.amount">
+          </div>
+          <div class="form-group">
+            <button>Save</button>
+          </div>
+        </form>
+  
+      </div>
+      <div class="boats-grid">
+  
+        <div class="boat-row" *ngFor="let job of jobs">
+          <div class="boat-row-details">
+            <span>{{ job.name }}</span>
+            <span>{{ job.amount }}</span>
+          </div>
+  
+          <div class="boat-row-action">
+            <a><i class="fa-solid fa-trash-can"></i></a>
+          </div>
+        </div> 
+      </div>
+    </div>
+  
+  
+  </div>
