@@ -10,10 +10,6 @@ import { BoatsService } from './service/boats.service';
 })
 export class AppComponent {
   
-<<<<<<< HEAD
   title = "boats" ;
-=======
-  title = "boats"
->>>>>>> 7c83e6e29413f75edc8f278282669a08d6b34fab
 
 }
