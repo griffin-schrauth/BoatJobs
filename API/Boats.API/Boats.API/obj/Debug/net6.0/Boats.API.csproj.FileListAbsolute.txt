@@ -67,6 +67,9 @@ C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Boa
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Boats.API.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Boats.API.pdb
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -74,6 +77,8 @@ C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Mic
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll

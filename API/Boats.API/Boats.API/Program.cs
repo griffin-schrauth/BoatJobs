@@ -1,4 +1,5 @@
 using Boats.API.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BoatsDbContext>(options => 
 options.UseSqlServer(builder.Configuration.GetConnectionString("BoatsDbConnectionString")));
 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+    .AddEntityFrameworkStores<BoatsDbContext>();
+        
 builder.Services.AddCors((setup) =>
 {
     setup.AddPolicy("default", (options) =>
@@ -30,6 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseAuthentication();
 
 app.UseCors("default");
 
