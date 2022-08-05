@@ -7,11 +7,13 @@ import { AppRoutingModule,routingComponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

@@ -125,3 +125,14 @@ C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\obj\Debug\net6.0\ref
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\obj\Debug\net6.0\Boats.API.pdb
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\obj\Debug\net6.0\Boats.API.genruntimeconfig.cache
 C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\obj\Debug\net6.0\ref\Boats.API.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\EntityFramework.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Owin.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Owin.Security.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Owin.Security.Cookies.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Owin.Security.OAuth.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\griff\GithubProjs\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Owin.dll

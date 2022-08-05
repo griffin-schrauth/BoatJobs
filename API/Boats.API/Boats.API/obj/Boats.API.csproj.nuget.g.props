@@ -20,6 +20,8 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\griff\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\griff\.nuget\packages\newtonsoft.json\6.0.4</PkgNewtonsoft_Json>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\griff\.nuget\packages\microsoft.entityframeworkcore.tools\6.0.7</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\griff\.nuget\packages\entityframework\6.1.0</PkgEntityFramework>
   </PropertyGroup>
 </Project>

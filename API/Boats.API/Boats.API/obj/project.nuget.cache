@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "11KCQ0eHjaQnMRAgpFdADT4Nk6ZGWPfdYtMC5ZWBEitIx2EohaeihDBaPvIREP8hxhKrasjlLJ45oqCDJsuNPw==",
+  "dgSpecHash": "P9jpr9Vo/drkwnWx/ccPxSPhfhGToDQzSWUw2nMZhSNalHopPtME9vky0BeptcCijePGOXCi7b9xBDWw/knzGw==",
   "success": true,
   "projectFilePath": "C:\\Users\\griff\\GithubProjs\\BoatJobs\\API\\Boats.API\\Boats.API\\Boats.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\griff\\.nuget\\packages\\entityframework\\6.1.0\\entityframework.6.1.0.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\microsoft.aspnet.identity.entityframework\\2.2.3\\microsoft.aspnet.identity.entityframework.2.2.3.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\microsoft.aspnet.identity.owin\\2.2.3\\microsoft.aspnet.identity.owin.2.2.3.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.7\\microsoft.aspnetcore.cryptography.internal.6.0.7.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.7\\microsoft.aspnetcore.cryptography.keyderivation.6.0.7.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.7\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.7.nupkg.sha512",
@@ -38,8 +42,14 @@
     "C:\\Users\\griff\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\microsoft.owin\\3.0.1\\microsoft.owin.3.0.1.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\microsoft.owin.security\\3.0.1\\microsoft.owin.security.3.0.1.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\microsoft.owin.security.cookies\\3.0.1\\microsoft.owin.security.cookies.3.0.1.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\microsoft.owin.security.oauth\\3.0.1\\microsoft.owin.security.oauth.3.0.1.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
+    "C:\\Users\\griff\\.nuget\\packages\\owin\\1.0.0\\owin.1.0.0.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\swashbuckle.aspnetcore\\6.3.2\\swashbuckle.aspnetcore.6.3.2.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.3.2\\swashbuckle.aspnetcore.swagger.6.3.2.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.3.2\\swashbuckle.aspnetcore.swaggergen.6.3.2.nupkg.sha512",
@@ -59,5 +69,106 @@
     "C:\\Users\\griff\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\griff\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework 6.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Core 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Core",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.EntityFramework 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.EntityFramework",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Identity.Owin 2.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Identity.Owin",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Security 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Security",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Security.Cookies 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Security.Cookies",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Owin.Security.OAuth 3.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Owin.Security.OAuth",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Newtonsoft.Json 6.0.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Owin",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }
