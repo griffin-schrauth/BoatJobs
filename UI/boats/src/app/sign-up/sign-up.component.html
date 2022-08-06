@@ -7,18 +7,21 @@
             <form class="col s12 white" #userRegistrationForm="ngForm">
                 <div class="row">
                     <div class="input-field col s6">
-                        <input type="text" name="UserName" #UserName="ngModel" [(ngModel)]="user.UserName" required>
-                        <label>UserName</label>
+                        <input id="username" class="validate" type="text" name="UserName" #UserName="ngModel" [(ngModel)]="user.UserName" required>
+                        <label for="username" data-error="Required Field!">UserName</label>
+                        <span class="helper-text"  data-error="Required Field!" data-success="Ok"></span>
                     </div>
                     <div class="input-field col s6">
-                        <input type="text" name="Password" #Password="ngModel" [(ngModel)]="user.Password" required>
-                        <label>Password</label>
+                        <input id="password" class="validate" type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password" required minlength="3">
+                        <label for="password" [attr.data-error]="Password.errors!=null?(Password.errors.required?'Required field!':'Minimum 3 characters needed'):''">Password</label>
+                        <span class="helper-text" [attr.data-error]="Password.errors!=null?(Password.errors.required?'Required field!':'Minimum 3 characters needed'):''" data-success="Ok"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" name="Email" #Email="ngModel" [(ngModel)]="user.Email">
-                        <label>Email</label>
+                        <input class="validate" type="text" name="Email" #Email="ngModel" [(ngModel)]="user.Email" [pattern]="emailPattern" required >
+                        <label data-error="Invalid Email">Email</label>
+                        <span class="helper-text"  data-error="Invalid Email" data-success="Ok"></span>
                     </div>
                 </div>
                 <div class="row">
@@ -33,7 +36,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <button class="btn-large btn-submit" type="submit">Submit</button>
+                        <button [disabled]="!userRegistrationForm.valid" class="btn-large btn-submit" type="submit">Submit</button>
                     </div>
                 </div>
             </form>
