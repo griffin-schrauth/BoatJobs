@@ -1,8 +1,19 @@
+using Boats.API;
 using Boats.API.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog();
 
 // Add services to the container.
 
@@ -15,8 +26,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BoatsDbContext>(options => 
 options.UseSqlServer(builder.Configuration.GetConnectionString("BoatsDbConnectionString")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-    .AddEntityFrameworkStores<BoatsDbContext>();
+builder.Services.AddAuthentication();
+builder.Services.ConfigureIdentity();
         
 builder.Services.AddCors((setup) =>
 {
