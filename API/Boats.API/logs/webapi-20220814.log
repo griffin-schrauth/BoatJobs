@@ -1,0 +1,22 @@
+[2022-08-14 13:47:46.128 -04:00  INF]  User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2022-08-14 13:47:46.394 -04:00  INF]  Now listening on: https://localhost:7132
+[2022-08-14 13:47:46.394 -04:00  INF]  Now listening on: http://localhost:5132
+[2022-08-14 13:47:46.396 -04:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-08-14 13:47:46.396 -04:00  INF]  Hosting environment: Development
+[2022-08-14 13:47:46.396 -04:00  INF]  Content root path: C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\
+[2022-08-14 13:47:46.779 -04:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/index.html - -
+[2022-08-14 13:47:47.050 -04:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - -
+[2022-08-14 13:47:47.058 -04:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 5.8120ms
+[2022-08-14 13:47:47.058 -04:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/index.html - - - 200 - text/html;charset=utf-8 282.9413ms
+[2022-08-14 13:47:47.069 -04:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_vs/browserLink - -
+[2022-08-14 13:47:47.089 -04:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.2334ms
+[2022-08-14 13:47:47.211 -04:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
+[2022-08-14 13:47:47.326 -04:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 114.3370ms
+[2022-08-14 13:47:50.938 -04:00  INF]  Request starting HTTP/2 GET https://localhost:7132/WeatherForecast - -
+[2022-08-14 13:47:50.947 -04:00  INF]  Executing endpoint 'Boats.API.Controllers.WeatherForecastController.Get (Boats.API)'
+[2022-08-14 13:47:50.956 -04:00  INF]  Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Boats.API.WeatherForecast] Get() on controller Boats.API.Controllers.WeatherForecastController (Boats.API).
+[2022-08-14 13:48:14.773 -04:00  INF]  Weather Forecast Executing..
+[2022-08-14 13:48:14.798 -04:00  INF]  Executing ObjectResult, writing value of type 'Boats.API.WeatherForecast[]'.
+[2022-08-14 13:48:14.809 -04:00  INF]  Executed action Boats.API.Controllers.WeatherForecastController.Get (Boats.API) in 23848.0773ms
+[2022-08-14 13:48:14.811 -04:00  INF]  Executed endpoint 'Boats.API.Controllers.WeatherForecastController.Get (Boats.API)'
+[2022-08-14 13:48:14.811 -04:00  INF]  Request finished HTTP/2 GET https://localhost:7132/WeatherForecast - - - 200 - application/json;+charset=utf-8 23873.7376ms
