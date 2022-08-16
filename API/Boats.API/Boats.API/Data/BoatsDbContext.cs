@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Boats.API.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Boats.API.Data

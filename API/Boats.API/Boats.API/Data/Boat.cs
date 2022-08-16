@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Boats.API.Models
+namespace Boats.API.Data
 {
     public class Boat
     {
@@ -12,7 +12,7 @@ namespace Boats.API.Models
         public string Zipcode { get; set; }
         public string JobTitle { get; set; }
         public string JobDesciption { get; set; }
-        public string Date { get; set; }    
-        public float Amount { get; set; }   
+        public string Date { get; set; }
+        public float Amount { get; set; }
     }
 }

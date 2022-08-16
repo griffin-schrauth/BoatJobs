@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "75yMdnS3ROTPNfjia/ObWl0uEu4GN4mvv2xDZhuiAoq5/Mf8Tt7LBF/rG0cfzF6y+wX5PIkK6HGi0UsVYbzN1Q==",
+  "dgSpecHash": "ztsDVJbMU/jsTZHCgySqKbNT3SYriX76zpnNRQWk566utlmlSSJKKGHtfxJGqqcj+pdLsuSqScxdyhjMbMixSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Owner\\Dev\\BoatJobs\\API\\Boats.API\\Boats.API\\Boats.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Owner\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
