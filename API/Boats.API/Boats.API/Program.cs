@@ -1,4 +1,5 @@
 using Boats.API;
+using Boats.API.Configurations;
 using Boats.API.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -37,6 +38,7 @@ builder.Services.AddCors((setup) =>
     });
 });
 
+builder.Services.AddAutoMapper(typeof(MapperInitilizer));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

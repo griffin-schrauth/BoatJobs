@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-
+using Boats.API.Data;
+using Boats.API.Models;
 
 namespace Boats.API.Configurations
 {
@@ -7,7 +8,8 @@ namespace Boats.API.Configurations
     {
         public MapperInitilizer()
         {
-            
+            CreateMap<Boat, BoatDTO>().ReverseMap();
+            CreateMap<Boat, CreateBoatDTO>().ReverseMap();
         }
     }
 }
