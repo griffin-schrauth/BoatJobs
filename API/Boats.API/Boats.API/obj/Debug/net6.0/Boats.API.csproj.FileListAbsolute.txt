@@ -90,6 +90,8 @@ C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Humanizer.d
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -108,6 +110,8 @@ C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.I
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.OpenApi.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Serilog.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Serilog.AspNetCore.dll
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll

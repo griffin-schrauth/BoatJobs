@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Boats.API.Configurations.Entities;
 
 namespace Boats.API.Data
 {
@@ -10,6 +11,13 @@ namespace Boats.API.Data
         }
 
         public DbSet<Boat> Boats { get; set; }
-        
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.ApplyConfiguration(new RoleConfiguration());
+        }
+
     }
 }

@@ -1,6 +1,8 @@
 using Boats.API;
 using Boats.API.Configurations;
 using Boats.API.Data;
+using Boats.API.IRepository;
+using Boats.API.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -18,7 +20,7 @@ builder.Logging.AddSerilog(logger);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddNewtonsoftJson(op => op.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -39,6 +41,8 @@ builder.Services.AddCors((setup) =>
 });
 
 builder.Services.AddAutoMapper(typeof(MapperInitilizer));
+
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

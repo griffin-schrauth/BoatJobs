@@ -1,4 +1,7 @@
-﻿using Boats.API.Data;
+﻿using AutoMapper;
+using Boats.API.Data;
+using Boats.API.IRepository;
+using Boats.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,15 +9,20 @@ namespace Boats.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BoatsController : Controller
+    public class BoatsController : ControllerBase
     {
+        private readonly IUnitOfWork _unitOfWork;
+
         private readonly BoatsDbContext boatsDbContext;
 
         private readonly ILogger<BoatsController> _logger;
-        public BoatsController(BoatsDbContext boatsDbContext, ILogger<BoatsController> logger)
+        private readonly IMapper _mapper;
+        public BoatsController(BoatsDbContext boatsDbContext,IUnitOfWork unitOfWork, ILogger<BoatsController> logger, IMapper mapper)
         {
             this.boatsDbContext = boatsDbContext;
-            _logger = logger;   
+            _logger = logger; 
+            _unitOfWork = unitOfWork; 
+            _mapper = mapper;
         }
 
 
@@ -22,9 +30,18 @@ namespace Boats.API.Controllers
         //Get all jobs that have been posted
         public async Task<IActionResult> GetAllJobs()
         {
-            _logger.LogInformation("Getting All Jobs");
-            var boats = await boatsDbContext.Boats.ToListAsync();
-            return Ok(boats);
+            try
+            {
+                var boats = await _unitOfWork.Boats.GetAll();
+                var results = _mapper.Map<IList<BoatDTO>>(boats);
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Something went wrong in the {nameof(GetAllJobs)}");
+                return StatusCode(500,"Internal server error. Please Try Again");
+            }
+            
         }
 
         [HttpGet]
@@ -32,13 +49,17 @@ namespace Boats.API.Controllers
         [ActionName("GetJob")]
         public async Task<IActionResult> GetJob([FromRoute] Guid id)
         {
-            _logger.LogInformation("Getting A Specific Job");
-            var card = await boatsDbContext.Boats.FirstOrDefaultAsync(x => x.Id == id);
-            if (card != null)
+            try
             {
-                return Ok(card);
+                var job = await _unitOfWork.Boats.Get( q => q.Id == id);
+                var result = _mapper.Map<BoatDTO>(job);
+                return Ok(result);
             }
-            return NotFound("Card not found");
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Something went wrong in the {nameof(GetAllJobs)}");
+                return StatusCode(500, "Internal server error. Please Try Again");
+            }
         }
 
         [HttpPost]

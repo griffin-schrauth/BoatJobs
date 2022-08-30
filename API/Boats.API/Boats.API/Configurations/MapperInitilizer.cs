@@ -10,6 +10,7 @@ namespace Boats.API.Configurations
         {
             CreateMap<Boat, BoatDTO>().ReverseMap();
             CreateMap<Boat, CreateBoatDTO>().ReverseMap();
+            CreateMap<ApiUser, UserDTO>().ReverseMap();
         }
     }
 }
