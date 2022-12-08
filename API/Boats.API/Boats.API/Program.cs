@@ -3,6 +3,7 @@ using Boats.API.Configurations;
 using Boats.API.Data;
 using Boats.API.IRepository;
 using Boats.API.Repository;
+using Boats.API.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -31,6 +32,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("BoatsDbConnectio
 
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
+builder.Services.ConfigureJWT(builder.Configuration);
         
 builder.Services.AddCors((setup) =>
 {
@@ -43,6 +45,7 @@ builder.Services.AddCors((setup) =>
 builder.Services.AddAutoMapper(typeof(MapperInitilizer));
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IAuthManager, AuthManager>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

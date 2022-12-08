@@ -37,7 +37,7 @@ namespace Boats.API.Controllers
                 var user = _mapper.Map<ApiUser>(userDTO);
                 user.UserName = userDTO.Email;
                 // this prev line is because identity requires username. we are just using the email to be the same at the username. After testing make sure we 
-                //change this
+                //change this -- when testing user role must be defined as user or admin. neeed to have checkpoint for user that enters other than that for now. USER roles (Admin/user)
                 var result = await _userManager.CreateAsync(user, userDTO.Password);
 
                 if (!result.Succeeded)

@@ -168,3 +168,4 @@ C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\obj\Debug\net6.0\refint\Boat
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\obj\Debug\net6.0\Boats.API.pdb
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\obj\Debug\net6.0\Boats.API.genruntimeconfig.cache
 C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\obj\Debug\net6.0\ref\Boats.API.dll
+C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
