@@ -55,6 +55,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+AddSwaggerDoc(builder.Services);
+void AddSwaggerDoc(object services)
+{
+    throw new NotImplementedException();
+}
+
 app.UseAuthentication();
 
 app.UseCors("default");
