@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 using Boats.API.Models;
+using Boats.API.Services;
 
 namespace Boats.API.Controllers
 {
@@ -12,16 +13,17 @@ namespace Boats.API.Controllers
     public class AccountController : ControllerBase
     {
         private readonly UserManager<ApiUser> _userManager;
-        
         private readonly ILogger<AccountController> _logger;
         private readonly IMapper _mapper;
+        private readonly IAuthManager _authManager;
 
-        public AccountController(UserManager<ApiUser> userManager,  ILogger<AccountController> logger, IMapper mapper)
+
+        public AccountController(UserManager<ApiUser> userManager,  ILogger<AccountController> logger, IMapper mapper, IAuthManager authManager)
         {
             _userManager = userManager;
-            
             _logger = logger;
             _mapper = mapper;
+            _authManager = authManager; 
         }
         [HttpPost]
         [Route("register")]
@@ -59,33 +61,30 @@ namespace Boats.API.Controllers
 
         }
 
-        //[HttpPost]
-        //[Route("login")]
-        //public async Task<IActionResult> Login([FromBody] LoginUserDTO userDTO)
-        //{
-        //    _logger.LogInformation($"Login Attempt for {userDTO.Email} ");
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return BadRequest(ModelState);
-        //    }
-        //    try
-        //    {
-        //        var result = await _signInManager.PasswordSignInAsync(userDTO.Email, userDTO.Password, false, false);
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> Login([FromBody] LoginUserDTO userDTO)
+        {
+            _logger.LogInformation($"Login Attempt for {userDTO.Email} ");
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                if(!await _authManager.ValidateUser(userDTO))
+                {
+                    return Unauthorized();
+                }
 
-        //        if(!result.Succeeded)
-        //        {
-        //            return Unauthorized(userDTO);
-        //        }
+                return Accepted(new {Token = await _authManager.CreateToken() });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Something Went Wrong in the {nameof(Login)}");
+                return Problem($"Something Went Wrong in the {nameof(Login)}", statusCode: 500);
+            }
 
-        //        return Accepted();
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError(ex, $"Something Went Wrong in the {nameof(Login)}");
-        //        return Problem($"Something Went Wrong in the {nameof(Login)}", statusCode: 500);
-        //    }
-
-        //}
+        }
     }
 }

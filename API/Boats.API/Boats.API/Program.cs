@@ -6,6 +6,7 @@ using Boats.API.Repository;
 using Boats.API.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -46,6 +47,8 @@ builder.Services.AddAutoMapper(typeof(MapperInitilizer));
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
+AddSwaggerDoc(builder.Services);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -55,10 +58,41 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-AddSwaggerDoc(builder.Services);
-void AddSwaggerDoc(object services)
+
+
+void AddSwaggerDoc(IServiceCollection services)
 {
-    throw new NotImplementedException();
+    services.AddSwaggerGen(c =>
+    {
+        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme {
+        Description = @"JWT Authorization header using the Bearer scheme.
+        Enter 'Bearer' [space] and then your token in the text input below.
+        Example: 'Bearer 12345abcdef",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+        });
+
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement() {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer",
+
+                    },
+                    Scheme = "@auth2",
+                    Name = "Bearer",
+                    In = ParameterLocation.Header
+                },
+                new List<string>()
+            }
+        });
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = " Boat", Version = "v1" });
+    });
 }
 
 app.UseAuthentication();
