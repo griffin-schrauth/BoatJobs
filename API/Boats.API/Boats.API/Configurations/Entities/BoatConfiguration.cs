@@ -12,6 +12,7 @@ namespace Boats.API.Configurations.Entities
             builder.HasData(
                 new Boat
                 {
+                    Id = Guid.NewGuid(),
                     Name = "TestingBoat",
                     County = "Royal Palm Beach",
                     State = "Florida",
@@ -23,6 +24,7 @@ namespace Boats.API.Configurations.Entities
                 },
                 new Boat
                 {
+                    Id = Guid.NewGuid(),
                     Name = "TestingBoatTwo",
                     County = "Royal Palm Beach",
                     State = "Florida",
@@ -32,7 +34,7 @@ namespace Boats.API.Configurations.Entities
                     Date = "1/16/2023",
                     Amount = 75
                 }
-            );
+            ) ;
         }
     }
 }

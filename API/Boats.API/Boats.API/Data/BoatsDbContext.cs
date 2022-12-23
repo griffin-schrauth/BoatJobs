@@ -17,6 +17,7 @@ namespace Boats.API.Data
             base.OnModelCreating(builder);
 
             builder.ApplyConfiguration(new RoleConfiguration());
+            builder.ApplyConfiguration(new BoatConfiguration());
         }
 
     }

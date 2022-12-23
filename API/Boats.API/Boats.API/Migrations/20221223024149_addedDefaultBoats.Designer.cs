@@ -4,6 +4,7 @@ using Boats.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Boats.API.Migrations
 {
     [DbContext(typeof(BoatsDbContext))]
-    partial class BoatsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221223024149_addedDefaultBoats")]
+    partial class addedDefaultBoats
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -2,6 +2,7 @@
 using Boats.API.Data;
 using Boats.API.IRepository;
 using Boats.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -43,7 +44,7 @@ namespace Boats.API.Controllers
             }
             
         }
-
+        [Authorize]
         [HttpGet]
         [Route("{id:guid}")]
         [ActionName("GetJob")]
