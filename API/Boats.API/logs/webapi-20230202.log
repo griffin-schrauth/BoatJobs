@@ -1,0 +1,28 @@
+[2023-02-02 08:45:11.353 -05:00  INF]  User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2023-02-02 08:45:11.688 -05:00  INF]  Now listening on: https://localhost:7132
+[2023-02-02 08:45:11.688 -05:00  INF]  Now listening on: http://localhost:5132
+[2023-02-02 08:45:11.690 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-02-02 08:45:11.690 -05:00  INF]  Hosting environment: Development
+[2023-02-02 08:45:11.690 -05:00  INF]  Content root path: C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\
+[2023-02-02 08:45:12.100 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/index.html - -
+[2023-02-02 08:45:12.425 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - -
+[2023-02-02 08:45:12.434 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/index.html - - - 200 - text/html;charset=utf-8 337.2035ms
+[2023-02-02 08:45:12.434 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 6.6269ms
+[2023-02-02 08:45:12.442 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_vs/browserLink - -
+[2023-02-02 08:45:12.493 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.8285ms
+[2023-02-02 08:45:12.685 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
+[2023-02-02 08:45:12.824 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 139.6631ms
+[2023-02-02 08:47:36.789 -05:00  INF]  User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2023-02-02 08:47:37.066 -05:00  INF]  Now listening on: https://localhost:7132
+[2023-02-02 08:47:37.066 -05:00  INF]  Now listening on: http://localhost:5132
+[2023-02-02 08:47:37.069 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-02-02 08:47:37.069 -05:00  INF]  Hosting environment: Development
+[2023-02-02 08:47:37.069 -05:00  INF]  Content root path: C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\
+[2023-02-02 08:47:37.520 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/index.html - -
+[2023-02-02 08:47:37.809 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - -
+[2023-02-02 08:47:37.810 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/index.html - - - 200 - text/html;charset=utf-8 293.0818ms
+[2023-02-02 08:47:37.821 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 11.9229ms
+[2023-02-02 08:47:37.827 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_vs/browserLink - -
+[2023-02-02 08:47:37.844 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.2956ms
+[2023-02-02 08:47:37.928 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
+[2023-02-02 08:47:38.078 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 149.6889ms
