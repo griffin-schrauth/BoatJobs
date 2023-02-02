@@ -64,16 +64,35 @@ namespace Boats.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddJob([FromBody] Boat boat)
+        public async Task<IActionResult> CreateJob([FromBody] CreateBoatDTO boatDTO)
         {
 
-            _logger.LogInformation("Adding A Job");
-            boat.Id = Guid.NewGuid();
-            await boatsDbContext.Boats.AddAsync(boat);
+            if (!ModelState.IsValid) { 
+                _logger.LogInformation($"Invalid POST attempt in  {nameof(CreateJob)} ");         
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var job = _mapper.Map<Boat>(boatDTO);
+                //job.Id = Guid.NewGuid();
+                await _unitOfWork.Boats.Insert(job);
+                await _unitOfWork.Save();
 
-            await boatsDbContext.SaveChangesAsync();
+                return CreatedAtAction(nameof(GetJob), new { id = job.Id }, job);
+            }
+            catch (Exception ex)
+            {
 
-            return CreatedAtAction(nameof(GetJob), new {id = boat.Id}, boat);
+                _logger.LogError(ex, $"Something Went Wrong in the {nameof(CreateJob)}");
+                return StatusCode(500, "Internal Server Error. Please Try Again Later.");
+            }
+            //_logger.LogInformation("Adding A Job");
+            //boatDTO.Id = Guid.NewGuid();
+            //await boatsDbContext.Boats.AddAsync(boatDTO);
+
+            //await boatsDbContext.SaveChangesAsync();
+
+            //return CreatedAtAction(nameof(GetJob), new {id = boatDTO.Id}, boatDTO);
         }
 
         [HttpDelete]
