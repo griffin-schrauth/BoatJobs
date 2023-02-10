@@ -25,19 +25,21 @@ namespace Boats.API.Services
             var claims = await GetClaims();
             var token = GenerateTokenOptions(signingCredentials, claims);
 
+
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
         private JwtSecurityToken GenerateTokenOptions(SigningCredentials signingCredentials, List<Claim> claims)
         {
             var jwtSettings = _configuration.GetSection("Jwt");
-            var expiration = DateTime.Now.AddMinutes(Convert.ToDouble(jwtSettings.GetSection("lifetime").Value));
+            var expiration = DateTime.Now.AddMinutes(Convert.ToDouble(jwtSettings.GetSection("lifetime").Value));//can change time for expiration
 
             var token = new JwtSecurityToken(
-                issuer: jwtSettings.GetSection("validIssuer").Value,
+                issuer: jwtSettings.GetSection("Issuer").Value,
                 claims: claims,
                 expires: expiration,
-                signingCredentials: signingCredentials
+                signingCredentials: signingCredentials,
+                audience: "BoatJobAPI"
                 );
             return token;
         }

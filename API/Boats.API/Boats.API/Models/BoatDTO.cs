@@ -21,6 +21,11 @@ namespace Boats.API.Models
         public float Amount { get; set; }
 
     }
+
+    public class UpdateBoatDTO : CreateBoatDTO
+    {
+
+    }
     public class BoatDTO : CreateBoatDTO
     {
         [Required]

@@ -67,7 +67,7 @@ void AddSwaggerDoc(IServiceCollection services)
         c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme {
         Description = @"JWT Authorization header using the Bearer scheme.
         Enter 'Bearer' [space] and then your token in the text input below.
-        Example: 'Bearer 12345abcdef",
+        Example: 'Bearer 12345abcdef'",
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
@@ -80,6 +80,7 @@ void AddSwaggerDoc(IServiceCollection services)
                 {
                     Reference = new OpenApiReference
                     {
+                        
                         Type = ReferenceType.SecurityScheme,
                         Id = "Bearer",
 
