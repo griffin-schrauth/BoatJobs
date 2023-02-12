@@ -36,6 +36,7 @@ namespace Boats.API
             })
             .AddJwtBearer(o =>
             {
+                o.Audience = "BoatJobAPI";
                 o.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
@@ -43,6 +44,7 @@ namespace Boats.API
                     ValidateIssuerSigningKey = true,
                     ValidIssuer = jwtSettings.GetSection("Issuer").Value,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key)),
+                    
                 };
             });
 

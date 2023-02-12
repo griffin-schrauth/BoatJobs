@@ -40,3 +40,17 @@
 [2023-02-02 08:48:17.071 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.6170ms
 [2023-02-02 08:48:17.187 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
 [2023-02-02 08:48:17.319 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 131.9076ms
+[2023-02-02 08:58:17.389 -05:00  INF]  User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2023-02-02 08:58:17.646 -05:00  INF]  Now listening on: https://localhost:7132
+[2023-02-02 08:58:17.646 -05:00  INF]  Now listening on: http://localhost:5132
+[2023-02-02 08:58:17.648 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-02-02 08:58:17.648 -05:00  INF]  Hosting environment: Development
+[2023-02-02 08:58:17.648 -05:00  INF]  Content root path: C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\
+[2023-02-02 08:58:18.117 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/index.html - -
+[2023-02-02 08:58:18.433 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - -
+[2023-02-02 08:58:18.436 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/index.html - - - 200 - text/html;charset=utf-8 321.7886ms
+[2023-02-02 08:58:18.445 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 11.4967ms
+[2023-02-02 08:58:18.451 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_vs/browserLink - -
+[2023-02-02 08:58:18.470 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 19.2236ms
+[2023-02-02 08:58:18.566 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
+[2023-02-02 08:58:18.717 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.5418ms
