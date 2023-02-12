@@ -95,11 +95,8 @@ namespace Boats.API.Controllers
 
             //return CreatedAtAction(nameof(GetJob), new {id = boatDTO.Id}, boatDTO);
         }
-<<<<<<< HEAD
+
         [Authorize(Roles = "Administrator")]
-=======
-
-
         [Authorize]
         [HttpPut("{id:guid}")] 
         public async Task<IActionResult> UpdateJob(Guid id,[FromBody] UpdateBoatDTO boatDTO)
@@ -135,7 +132,7 @@ namespace Boats.API.Controllers
         }
 
 
->>>>>>> 533f506a695c57c112b91f00ac997b6f782a8e57
+
         [HttpDelete]
         [Route("{id:guid}")]
         public async Task<IActionResult> DeleteJob([FromRoute] Guid id)
@@ -151,37 +148,5 @@ namespace Boats.API.Controllers
             return NotFound("Job not found");
         }
 
-        [Authorize]
-        [HttpPut]
-        public async Task<IActionResult> UpdateJob(Guid id, [FromBody] UpdateBoatDTO boatDTO)
-        {
-
-            if (!ModelState.IsValid || id == Guid.Empty)
-            {
-                _logger.LogInformation($"Invalid UPDATE attempt in  {nameof(UpdateJob)} ");
-                return BadRequest(ModelState);
-            }
-            try
-            {
-                var job = await _unitOfWork.Boats.Get(q => q.Id == id);
-                if (job == null)
-                {
-                    _logger.LogError($"Invalid UPDATE attemp in {nameof(UpdateJob)}");
-                    return BadRequest("Submitted data is invalid");
-                }
-                _mapper.Map(boatDTO, job);
-                _unitOfWork.Boats.Update(job);
-                await _unitOfWork.Save();
-
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-
-                _logger.LogError(ex, $"Something Went Wrong in the {nameof(UpdateJob)}");
-                return StatusCode(500, "Internal Server Error. Please Try Again Later.");
-            }
-
-        }
     }
 }
