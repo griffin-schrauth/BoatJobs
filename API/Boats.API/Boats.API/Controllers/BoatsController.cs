@@ -18,11 +18,11 @@ namespace Boats.API.Controllers
 
         private readonly ILogger<BoatsController> _logger;
         private readonly IMapper _mapper;
-        public BoatsController(BoatsDbContext boatsDbContext,IUnitOfWork unitOfWork, ILogger<BoatsController> logger, IMapper mapper)
+        public BoatsController(BoatsDbContext boatsDbContext, IUnitOfWork unitOfWork, ILogger<BoatsController> logger, IMapper mapper)
         {
             this.boatsDbContext = boatsDbContext;
-            _logger = logger; 
-            _unitOfWork = unitOfWork; 
+            _logger = logger;
+            _unitOfWork = unitOfWork;
             _mapper = mapper;
         }
 
@@ -40,9 +40,9 @@ namespace Boats.API.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, $"Something went wrong in the {nameof(GetAllJobs)}");
-                return StatusCode(500,"Internal server error. Please Try Again");
+                return StatusCode(500, "Internal server error. Please Try Again");
             }
-            
+
         }
         [Authorize]
         [HttpGet]
@@ -52,7 +52,7 @@ namespace Boats.API.Controllers
         {
             try
             {
-                var job = await _unitOfWork.Boats.Get( q => q.Id == id);
+                var job = await _unitOfWork.Boats.Get(q => q.Id == id);
                 var result = _mapper.Map<BoatDTO>(job);
                 return Ok(result);
             }
@@ -62,13 +62,14 @@ namespace Boats.API.Controllers
                 return StatusCode(500, "Internal server error. Please Try Again");
             }
         }
-
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CreateJob([FromBody] CreateBoatDTO boatDTO)
         {
 
-            if (!ModelState.IsValid) { 
-                _logger.LogInformation($"Invalid POST attempt in  {nameof(CreateJob)} ");         
+            if (!ModelState.IsValid)
+            {
+                _logger.LogInformation($"Invalid POST attempt in  {nameof(CreateJob)} ");
                 return BadRequest(ModelState);
             }
             try
@@ -94,7 +95,7 @@ namespace Boats.API.Controllers
 
             //return CreatedAtAction(nameof(GetJob), new {id = boatDTO.Id}, boatDTO);
         }
-
+        [Authorize(Roles = "Administrator")]
         [HttpDelete]
         [Route("{id:guid}")]
         public async Task<IActionResult> DeleteJob([FromRoute] Guid id)
@@ -103,13 +104,44 @@ namespace Boats.API.Controllers
             var existingJob = await boatsDbContext.Boats.FirstOrDefaultAsync(x => x.Id == id);
             if (existingJob != null)
             {
-                boatsDbContext.Remove(existingJob); 
+                boatsDbContext.Remove(existingJob);
                 await boatsDbContext.SaveChangesAsync();
                 return Ok(existingJob);
             }
             return NotFound("Job not found");
         }
 
-       
+        [Authorize]
+        [HttpPut]
+        public async Task<IActionResult> UpdateJob(Guid id, [FromBody] UpdateBoatDTO boatDTO)
+        {
+
+            if (!ModelState.IsValid || id == Guid.Empty)
+            {
+                _logger.LogInformation($"Invalid UPDATE attempt in  {nameof(UpdateJob)} ");
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                var job = await _unitOfWork.Boats.Get(q => q.Id == id);
+                if (job == null)
+                {
+                    _logger.LogError($"Invalid UPDATE attemp in {nameof(UpdateJob)}");
+                    return BadRequest("Submitted data is invalid");
+                }
+                _mapper.Map(boatDTO, job);
+                _unitOfWork.Boats.Update(job);
+                await _unitOfWork.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError(ex, $"Something Went Wrong in the {nameof(UpdateJob)}");
+                return StatusCode(500, "Internal Server Error. Please Try Again Later.");
+            }
+
+        }
     }
 }

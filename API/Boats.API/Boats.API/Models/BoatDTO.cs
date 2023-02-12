@@ -21,6 +21,18 @@ namespace Boats.API.Models
         public float Amount { get; set; }
 
     }
+    public class UpdateBoatDTO : CreateBoatDTO
+    {
+        // can take away the inheritance and only expose fields that we want to update
+        //such as
+        /*
+        [Required]
+        public string Name { get; set; }
+        [Required]
+        public string County { get; set; }
+        */
+
+    }
     public class BoatDTO : CreateBoatDTO
     {
         [Required]
