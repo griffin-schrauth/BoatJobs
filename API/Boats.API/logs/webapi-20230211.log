@@ -1,0 +1,60 @@
+[2023-02-11 22:57:45.302 -05:00  INF]  User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2023-02-11 22:57:45.859 -05:00  INF]  Now listening on: https://localhost:7132
+[2023-02-11 22:57:45.859 -05:00  INF]  Now listening on: http://localhost:5132
+[2023-02-11 22:57:45.862 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-02-11 22:57:45.862 -05:00  INF]  Hosting environment: Development
+[2023-02-11 22:57:45.862 -05:00  INF]  Content root path: C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\
+[2023-02-11 22:57:46.505 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/index.html - -
+[2023-02-11 22:57:46.862 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - -
+[2023-02-11 22:57:46.873 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/index.html - - - 200 - text/html;charset=utf-8 369.3056ms
+[2023-02-11 22:57:46.873 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 9.2040ms
+[2023-02-11 22:57:46.881 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_vs/browserLink - -
+[2023-02-11 22:57:46.907 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.8366ms
+[2023-02-11 22:57:46.993 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
+[2023-02-11 22:57:47.125 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 131.7918ms
+[2023-02-11 23:22:14.176 -05:00  INF]  User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2023-02-11 23:22:14.439 -05:00  INF]  Now listening on: https://localhost:7132
+[2023-02-11 23:22:14.440 -05:00  INF]  Now listening on: http://localhost:5132
+[2023-02-11 23:22:14.442 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-02-11 23:22:14.442 -05:00  INF]  Hosting environment: Development
+[2023-02-11 23:22:14.442 -05:00  INF]  Content root path: C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\
+[2023-02-11 23:22:14.777 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/index.html - -
+[2023-02-11 23:22:15.080 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - -
+[2023-02-11 23:22:15.085 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 4.3999ms
+[2023-02-11 23:22:15.085 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/index.html - - - 200 - text/html;charset=utf-8 313.1668ms
+[2023-02-11 23:22:15.092 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_vs/browserLink - -
+[2023-02-11 23:22:15.110 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 17.7593ms
+[2023-02-11 23:22:15.192 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
+[2023-02-11 23:22:15.320 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.4185ms
+[2023-02-11 23:28:06.803 -05:00  INF]  Request starting HTTP/2 POST https://localhost:7132/api/Account/login application/json-patch+json 68
+[2023-02-11 23:28:06.946 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:28:06.955 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.AccountController.Login (Boats.API)'
+[2023-02-11 23:28:06.998 -05:00  INF]  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Boats.API.Models.LoginUserDTO) on controller Boats.API.Controllers.AccountController (Boats.API).
+[2023-02-11 23:28:07.647 -05:00  INF]  Login Attempt for bearerTest@example.com 
+[2023-02-11 23:28:08.551 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:28:09.657 -05:00  INF]  Executed DbCommand (81ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+[2023-02-11 23:28:09.901 -05:00  INF]  Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+[2023-02-11 23:28:10.035 -05:00  INF]  Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2023-02-11 23:28:10.090 -05:00  INF]  Executed action Boats.API.Controllers.AccountController.Login (Boats.API) in 3085.0127ms
+[2023-02-11 23:28:10.092 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.AccountController.Login (Boats.API)'
+[2023-02-11 23:28:10.103 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7132/api/Account/login application/json-patch+json 68 - 202 325 application/json;+charset=utf-8 3300.4960ms
+[2023-02-11 23:28:56.007 -05:00  INF]  Request starting HTTP/2 POST https://localhost:7132/api/Boats application/json-patch+json 180
+[2023-02-11 23:28:56.076 -05:00  INF]  Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateAudience(IEnumerable`1 audiences, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+[2023-02-11 23:28:56.189 -05:00  INF]  Bearer was not authenticated. Failure message: IDX10208: Unable to validate audience. validationParameters.ValidAudience is null or whitespace and validationParameters.ValidAudiences is null.
+[2023-02-11 23:28:56.190 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:28:56.194 -05:00  INF]  Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2023-02-11 23:28:56.204 -05:00  INF]  AuthenticationScheme: Bearer was challenged.
+[2023-02-11 23:28:56.204 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7132/api/Boats application/json-patch+json 180 - 401 0 - 197.1602ms
