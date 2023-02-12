@@ -58,3 +58,186 @@ Microsoft.IdentityModel.Tokens.SecurityTokenInvalidAudienceException: IDX10208: 
 DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 [2023-02-11 23:28:56.204 -05:00  INF]  AuthenticationScheme: Bearer was challenged.
 [2023-02-11 23:28:56.204 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7132/api/Boats application/json-patch+json 180 - 401 0 - 197.1602ms
+[2023-02-11 23:37:07.276 -05:00  INF]  User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2023-02-11 23:37:07.726 -05:00  INF]  Now listening on: https://localhost:7132
+[2023-02-11 23:37:07.726 -05:00  INF]  Now listening on: http://localhost:5132
+[2023-02-11 23:37:07.729 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-02-11 23:37:07.730 -05:00  INF]  Hosting environment: Development
+[2023-02-11 23:37:07.730 -05:00  INF]  Content root path: C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\
+[2023-02-11 23:37:08.216 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/index.html - -
+[2023-02-11 23:37:08.503 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - -
+[2023-02-11 23:37:08.507 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/index.html - - - 200 - text/html;charset=utf-8 295.2989ms
+[2023-02-11 23:37:08.507 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 3.8034ms
+[2023-02-11 23:37:08.518 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_vs/browserLink - -
+[2023-02-11 23:37:08.542 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.9426ms
+[2023-02-11 23:37:08.631 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
+[2023-02-11 23:37:08.767 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.2701ms
+[2023-02-11 23:39:25.303 -05:00  INF]  Request starting HTTP/2 POST https://localhost:7132/api/Account/login application/json-patch+json 68
+[2023-02-11 23:39:25.373 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:39:25.378 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.AccountController.Login (Boats.API)'
+[2023-02-11 23:39:25.402 -05:00  INF]  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Boats.API.Models.LoginUserDTO) on controller Boats.API.Controllers.AccountController (Boats.API).
+[2023-02-11 23:39:25.832 -05:00  INF]  Login Attempt for bearerTest@example.com 
+[2023-02-11 23:39:26.700 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:39:27.552 -05:00  INF]  Executed DbCommand (74ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+[2023-02-11 23:39:27.780 -05:00  INF]  Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+[2023-02-11 23:39:27.898 -05:00  INF]  Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2023-02-11 23:39:27.944 -05:00  INF]  Executed action Boats.API.Controllers.AccountController.Login (Boats.API) in 2536.3731ms
+[2023-02-11 23:39:27.945 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.AccountController.Login (Boats.API)'
+[2023-02-11 23:39:27.955 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7132/api/Account/login application/json-patch+json 68 - 202 376 application/json;+charset=utf-8 2652.2863ms
+[2023-02-11 23:40:02.585 -05:00  INF]  Request starting HTTP/2 POST https://localhost:7132/api/Boats application/json-patch+json 181
+[2023-02-11 23:40:02.662 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:40:02.666 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.BoatsController.CreateJob (Boats.API)'
+[2023-02-11 23:40:02.669 -05:00  INF]  Route matched with {action = "CreateJob", controller = "Boats"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateJob(Boats.API.Models.CreateBoatDTO) on controller Boats.API.Controllers.BoatsController (Boats.API).
+[2023-02-11 23:40:02.727 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:40:02.896 -05:00  INF]  Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Single), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Boats] ([Id], [Amount], [County], [Date], [JobDesciption], [JobTitle], [Name], [State], [Zipcode])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+[2023-02-11 23:40:02.936 -05:00  INF]  Executing CreatedAtActionResult, writing value of type 'Boats.API.Data.Boat'.
+[2023-02-11 23:40:02.970 -05:00  INF]  Executed action Boats.API.Controllers.BoatsController.CreateJob (Boats.API) in 301.219ms
+[2023-02-11 23:40:02.970 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.BoatsController.CreateJob (Boats.API)'
+[2023-02-11 23:40:02.973 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7132/api/Boats application/json-patch+json 181 - 201 194 application/json;+charset=utf-8 387.7600ms
+[2023-02-11 23:40:19.086 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/api/Boats/a1b90539-f91f-41af-de54-08db0cb334cc - -
+[2023-02-11 23:40:19.090 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.BoatsController.GetJob (Boats.API)'
+[2023-02-11 23:40:19.094 -05:00  INF]  Route matched with {action = "GetJob", controller = "Boats"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJob(System.Guid) on controller Boats.API.Controllers.BoatsController (Boats.API).
+[2023-02-11 23:40:19.104 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:40:19.120 -05:00  INF]  Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Amount], [b].[County], [b].[Date], [b].[JobDesciption], [b].[JobTitle], [b].[Name], [b].[State], [b].[Zipcode]
+FROM [Boats] AS [b]
+WHERE [b].[Id] = @__id_0
+[2023-02-11 23:40:19.124 -05:00  INF]  Executing OkObjectResult, writing value of type 'Boats.API.Models.BoatDTO'.
+[2023-02-11 23:40:19.128 -05:00  INF]  Executed action Boats.API.Controllers.BoatsController.GetJob (Boats.API) in 33.7166ms
+[2023-02-11 23:40:19.128 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.BoatsController.GetJob (Boats.API)'
+[2023-02-11 23:40:19.128 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/api/Boats/a1b90539-f91f-41af-de54-08db0cb334cc - - - 200 194 application/json;+charset=utf-8 42.5640ms
+[2023-02-11 23:40:41.401 -05:00  INF]  Request starting HTTP/2 PUT https://localhost:7132/api/Boats/a1b90539-f91f-41af-de54-08db0cb334cc application/json-patch+json 179
+[2023-02-11 23:40:41.402 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:40:41.407 -05:00  INF]  Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Administrator)
+[2023-02-11 23:40:41.409 -05:00  INF]  AuthenticationScheme: Bearer was forbidden.
+[2023-02-11 23:40:41.410 -05:00  INF]  Request finished HTTP/2 PUT https://localhost:7132/api/Boats/a1b90539-f91f-41af-de54-08db0cb334cc application/json-patch+json 179 - 403 0 - 8.9905ms
+[2023-02-11 23:44:57.857 -05:00  INF]  User profile is available. Using 'C:\Users\Owner\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[2023-02-11 23:44:58.190 -05:00  INF]  Now listening on: https://localhost:7132
+[2023-02-11 23:44:58.190 -05:00  INF]  Now listening on: http://localhost:5132
+[2023-02-11 23:44:58.193 -05:00  INF]  Application started. Press Ctrl+C to shut down.
+[2023-02-11 23:44:58.193 -05:00  INF]  Hosting environment: Development
+[2023-02-11 23:44:58.193 -05:00  INF]  Content root path: C:\Users\Owner\Dev\BoatJobs\API\Boats.API\Boats.API\
+[2023-02-11 23:44:58.631 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/index.html - -
+[2023-02-11 23:44:58.926 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - -
+[2023-02-11 23:44:58.928 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/index.html - - - 200 - text/html;charset=utf-8 300.6854ms
+[2023-02-11 23:44:58.936 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_framework/aspnetcore-browser-refresh.js - - - 200 11988 application/javascript;+charset=utf-8 10.2957ms
+[2023-02-11 23:44:58.940 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/_vs/browserLink - -
+[2023-02-11 23:44:58.961 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.4607ms
+[2023-02-11 23:44:59.047 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - -
+[2023-02-11 23:44:59.172 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 125.5892ms
+[2023-02-11 23:45:22.505 -05:00  INF]  Request starting HTTP/2 POST https://localhost:7132/api/Account/login application/json-patch+json 68
+[2023-02-11 23:45:22.586 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:45:22.592 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.AccountController.Login (Boats.API)'
+[2023-02-11 23:45:22.616 -05:00  INF]  Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Boats.API.Models.LoginUserDTO) on controller Boats.API.Controllers.AccountController (Boats.API).
+[2023-02-11 23:45:23.093 -05:00  INF]  Login Attempt for bearerTest@example.com 
+[2023-02-11 23:45:23.968 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:45:24.879 -05:00  INF]  Executed DbCommand (83ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+[2023-02-11 23:45:25.107 -05:00  INF]  Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+[2023-02-11 23:45:25.238 -05:00  INF]  Executing AcceptedResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+[2023-02-11 23:45:25.284 -05:00  INF]  Executed action Boats.API.Controllers.AccountController.Login (Boats.API) in 2662.682ms
+[2023-02-11 23:45:25.285 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.AccountController.Login (Boats.API)'
+[2023-02-11 23:45:25.294 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7132/api/Account/login application/json-patch+json 68 - 202 376 application/json;+charset=utf-8 2789.1887ms
+[2023-02-11 23:46:02.834 -05:00  INF]  Request starting HTTP/2 POST https://localhost:7132/api/Boats application/json-patch+json 191
+[2023-02-11 23:46:02.910 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:46:02.916 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.BoatsController.CreateJob (Boats.API)'
+[2023-02-11 23:46:02.920 -05:00  INF]  Route matched with {action = "CreateJob", controller = "Boats"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateJob(Boats.API.Models.CreateBoatDTO) on controller Boats.API.Controllers.BoatsController (Boats.API).
+[2023-02-11 23:46:02.980 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:46:03.158 -05:00  INF]  Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Single), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Boats] ([Id], [Amount], [County], [Date], [JobDesciption], [JobTitle], [Name], [State], [Zipcode])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+[2023-02-11 23:46:03.194 -05:00  INF]  Executing CreatedAtActionResult, writing value of type 'Boats.API.Data.Boat'.
+[2023-02-11 23:46:03.219 -05:00  INF]  Executed action Boats.API.Controllers.BoatsController.CreateJob (Boats.API) in 299.5438ms
+[2023-02-11 23:46:03.219 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.BoatsController.CreateJob (Boats.API)'
+[2023-02-11 23:46:03.221 -05:00  INF]  Request finished HTTP/2 POST https://localhost:7132/api/Boats application/json-patch+json 191 - 201 204 application/json;+charset=utf-8 387.4404ms
+[2023-02-11 23:46:14.986 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 - -
+[2023-02-11 23:46:14.989 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.BoatsController.GetJob (Boats.API)'
+[2023-02-11 23:46:14.992 -05:00  INF]  Route matched with {action = "GetJob", controller = "Boats"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJob(System.Guid) on controller Boats.API.Controllers.BoatsController (Boats.API).
+[2023-02-11 23:46:15.002 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:46:15.017 -05:00  INF]  Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Amount], [b].[County], [b].[Date], [b].[JobDesciption], [b].[JobTitle], [b].[Name], [b].[State], [b].[Zipcode]
+FROM [Boats] AS [b]
+WHERE [b].[Id] = @__id_0
+[2023-02-11 23:46:15.025 -05:00  INF]  Executing OkObjectResult, writing value of type 'Boats.API.Models.BoatDTO'.
+[2023-02-11 23:46:15.029 -05:00  INF]  Executed action Boats.API.Controllers.BoatsController.GetJob (Boats.API) in 37.2993ms
+[2023-02-11 23:46:15.029 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.BoatsController.GetJob (Boats.API)'
+[2023-02-11 23:46:15.029 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 - - - 200 204 application/json;+charset=utf-8 43.4659ms
+[2023-02-11 23:46:44.107 -05:00  INF]  Request starting HTTP/2 PUT https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 application/json-patch+json 197
+[2023-02-11 23:46:44.115 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:46:44.120 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.BoatsController.UpdateJob (Boats.API)'
+[2023-02-11 23:46:44.123 -05:00  INF]  Route matched with {action = "UpdateJob", controller = "Boats"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateJob(System.Guid, Boats.API.Models.UpdateBoatDTO) on controller Boats.API.Controllers.BoatsController (Boats.API).
+[2023-02-11 23:46:44.129 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:46:44.135 -05:00  INF]  Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Amount], [b].[County], [b].[Date], [b].[JobDesciption], [b].[JobTitle], [b].[Name], [b].[State], [b].[Zipcode]
+FROM [Boats] AS [b]
+WHERE [b].[Id] = @__id_0
+[2023-02-11 23:46:44.165 -05:00  INF]  Executed DbCommand (6ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = Single), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Boats] SET [Amount] = @p0, [County] = @p1, [Date] = @p2, [JobDesciption] = @p3, [JobTitle] = @p4, [Name] = @p5, [State] = @p6, [Zipcode] = @p7
+WHERE [Id] = @p8;
+SELECT @@ROWCOUNT;
+[2023-02-11 23:46:44.173 -05:00  INF]  Executing StatusCodeResult, setting HTTP status code 204
+[2023-02-11 23:46:44.174 -05:00  INF]  Executed action Boats.API.Controllers.BoatsController.UpdateJob (Boats.API) in 50.4801ms
+[2023-02-11 23:46:44.174 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.BoatsController.UpdateJob (Boats.API)'
+[2023-02-11 23:46:44.174 -05:00  INF]  Request finished HTTP/2 PUT https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 application/json-patch+json 197 - 204 - - 67.2348ms
+[2023-02-11 23:46:53.748 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 - -
+[2023-02-11 23:46:53.748 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.BoatsController.GetJob (Boats.API)'
+[2023-02-11 23:46:53.748 -05:00  INF]  Route matched with {action = "GetJob", controller = "Boats"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJob(System.Guid) on controller Boats.API.Controllers.BoatsController (Boats.API).
+[2023-02-11 23:46:53.748 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:46:53.750 -05:00  INF]  Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Amount], [b].[County], [b].[Date], [b].[JobDesciption], [b].[JobTitle], [b].[Name], [b].[State], [b].[Zipcode]
+FROM [Boats] AS [b]
+WHERE [b].[Id] = @__id_0
+[2023-02-11 23:46:53.752 -05:00  INF]  Executing OkObjectResult, writing value of type 'Boats.API.Models.BoatDTO'.
+[2023-02-11 23:46:53.752 -05:00  INF]  Executed action Boats.API.Controllers.BoatsController.GetJob (Boats.API) in 3.9153ms
+[2023-02-11 23:46:53.752 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.BoatsController.GetJob (Boats.API)'
+[2023-02-11 23:46:53.752 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 - - - 200 210 application/json;+charset=utf-8 4.6586ms
+[2023-02-11 23:47:07.950 -05:00  INF]  Request starting HTTP/2 DELETE https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 - -
+[2023-02-11 23:47:07.950 -05:00  INF]  CORS policy execution successful.
+[2023-02-11 23:47:07.950 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.BoatsController.DeleteJob (Boats.API)'
+[2023-02-11 23:47:07.953 -05:00  INF]  Route matched with {action = "DeleteJob", controller = "Boats"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteJob(System.Guid) on controller Boats.API.Controllers.BoatsController (Boats.API).
+[2023-02-11 23:47:07.954 -05:00  INF]  Deleting A Job
+[2023-02-11 23:47:07.955 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:47:07.959 -05:00  INF]  Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Amount], [b].[County], [b].[Date], [b].[JobDesciption], [b].[JobTitle], [b].[Name], [b].[State], [b].[Zipcode]
+FROM [Boats] AS [b]
+WHERE [b].[Id] = @__id_0
+[2023-02-11 23:47:07.974 -05:00  INF]  Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Boats]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+[2023-02-11 23:47:07.980 -05:00  INF]  Executing OkObjectResult, writing value of type 'Boats.API.Data.Boat'.
+[2023-02-11 23:47:07.980 -05:00  INF]  Executed action Boats.API.Controllers.BoatsController.DeleteJob (Boats.API) in 27.1909ms
+[2023-02-11 23:47:07.980 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.BoatsController.DeleteJob (Boats.API)'
+[2023-02-11 23:47:07.980 -05:00  INF]  Request finished HTTP/2 DELETE https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 - - - 200 210 application/json;+charset=utf-8 30.4577ms
+[2023-02-11 23:47:13.886 -05:00  INF]  Request starting HTTP/2 GET https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 - -
+[2023-02-11 23:47:13.887 -05:00  INF]  Executing endpoint 'Boats.API.Controllers.BoatsController.GetJob (Boats.API)'
+[2023-02-11 23:47:13.887 -05:00  INF]  Route matched with {action = "GetJob", controller = "Boats"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJob(System.Guid) on controller Boats.API.Controllers.BoatsController (Boats.API).
+[2023-02-11 23:47:13.888 -05:00  INF]  Entity Framework Core 6.0.8 initialized 'BoatsDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+[2023-02-11 23:47:13.889 -05:00  INF]  Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Amount], [b].[County], [b].[Date], [b].[JobDesciption], [b].[JobTitle], [b].[Name], [b].[State], [b].[Zipcode]
+FROM [Boats] AS [b]
+WHERE [b].[Id] = @__id_0
+[2023-02-11 23:47:13.895 -05:00  INF]  Executing OkObjectResult, writing value of type 'null'.
+[2023-02-11 23:47:13.895 -05:00  INF]  Executed action Boats.API.Controllers.BoatsController.GetJob (Boats.API) in 7.489ms
+[2023-02-11 23:47:13.895 -05:00  INF]  Executed endpoint 'Boats.API.Controllers.BoatsController.GetJob (Boats.API)'
+[2023-02-11 23:47:13.895 -05:00  INF]  Request finished HTTP/2 GET https://localhost:7132/api/Boats/0b3a3294-1d3b-4953-d3c1-08db0cb40b86 - - - 204 0 - 8.6078ms

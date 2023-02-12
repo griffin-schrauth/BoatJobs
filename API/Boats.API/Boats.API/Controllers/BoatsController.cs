@@ -96,7 +96,7 @@ namespace Boats.API.Controllers
             //return CreatedAtAction(nameof(GetJob), new {id = boatDTO.Id}, boatDTO);
         }
 
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")] can add this back later
         [Authorize]
         [HttpPut("{id:guid}")] 
         public async Task<IActionResult> UpdateJob(Guid id,[FromBody] UpdateBoatDTO boatDTO)
@@ -125,7 +125,7 @@ namespace Boats.API.Controllers
             }
             catch(Exception ex)
             {
-                _logger.LogError(ex, $"Something Went Wrong in the {nameof(CreateJob)}");
+                _logger.LogError(ex, $"Something Went Wrong in the {nameof(UpdateJob)}");
                 return StatusCode(500, "Internal Server Error. Please Try Again Later.");
             }
         
