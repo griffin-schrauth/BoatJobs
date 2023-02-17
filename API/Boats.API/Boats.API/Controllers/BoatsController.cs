@@ -26,8 +26,25 @@ namespace Boats.API.Controllers
             _mapper = mapper;
         }
 
+        [HttpGet]//get all jobs but with limits
+        //Get all jobs that have been posted
+        public async Task<IActionResult> GetAllJobs([FromQuery] RequestParams requestParams)
+        {
+            try
+            {
+                var boats = await _unitOfWork.Boats.GetPagedList(requestParams);
+                var results = _mapper.Map<IList<BoatDTO>>(boats);
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Something went wrong in the {nameof(GetAllJobs)}");
+                return StatusCode(500, "Internal server error. Please Try Again");
+            }
 
-        [HttpGet]
+        }
+        /*
+        [HttpGet]//get all jobs updaated to get all jobs on different pages ^^
         //Get all jobs that have been posted
         public async Task<IActionResult> GetAllJobs()
         {
@@ -43,7 +60,7 @@ namespace Boats.API.Controllers
                 return StatusCode(500, "Internal server error. Please Try Again");
             }
 
-        }
+        }*/
         
         [HttpGet]
         [Route("{id:guid}")]
@@ -58,7 +75,7 @@ namespace Boats.API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Something went wrong in the {nameof(GetAllJobs)}");
+                _logger.LogError(ex, $"Something went wrong in the {nameof(GetJob)}");
                 return StatusCode(500, "Internal server error. Please Try Again");
             }
         }
