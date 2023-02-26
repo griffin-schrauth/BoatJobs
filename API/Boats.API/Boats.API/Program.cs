@@ -4,7 +4,9 @@ using Boats.API.Data;
 using Boats.API.IRepository;
 using Boats.API.Repository;
 using Boats.API.Services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Serilog;
@@ -22,7 +24,14 @@ builder.Logging.AddSerilog(logger);
 
 // Add services to the container.
 
-builder.Services.AddControllers().AddNewtonsoftJson(op => op.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+builder.Services.AddControllers(
+    config =>
+    {
+        config.CacheProfiles.Add("120SecondsDuration", new CacheProfile
+        {
+            Duration = 120
+        });
+    }).AddNewtonsoftJson(op => op.SerializerSettings.ReferenceLoopHandling=Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -31,6 +40,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BoatsDbContext>(options => 
 options.UseSqlServer(builder.Configuration.GetConnectionString("BoatsDbConnectionString")));
 
+builder.Services.AddHttpCacheHeaders(); 
+builder.Services.AddResponseCaching();
 builder.Services.AddAuthentication();
 builder.Services.ConfigureIdentity();
 builder.Services.ConfigureJWT(builder.Configuration);
@@ -49,6 +60,8 @@ builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IAuthManager, AuthManager>();
 AddSwaggerDoc(builder.Services);
 
+builder.Services.ConfigureVersioning();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -56,6 +69,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.ConfigureExceptionHandler();    //might need to go right after this if statement
 }
 
 
@@ -96,6 +110,9 @@ void AddSwaggerDoc(IServiceCollection services)
     });
 }
 
+app.UseResponseCaching();
+app.UseHttpCacheHeaders();
+app.UseRouting();
 app.UseAuthentication();
 
 app.UseCors("default");
